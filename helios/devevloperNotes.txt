@@ -1,0 +1,69 @@
+npm install =g @angular/cli
+
+ng new Helios
+ng serve
+
+ng add @angular/material
+
+
+--- new component ---
+
+ng generate component <name> --module app.module
+ng g c <name> --module app.module
+
+ng g c HomePage --module app.module
+----------------
+
+ng g c reqLog
+
+---------- app module ------
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReqLogComponent } from './req-log/req-log.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ReqLogComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+----------- add a new file material.module.ts to add all material modules -- 
+
+import { NgModule } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+
+@NgModule({
+    imports: [MatButtonModule],
+    exports: [MatButtonModule]
+})
+export class MaterialModule {}
+
+----------------- new services ----------
+ng g s services/reqLog
+
+--- interface --
+
+ng g i interfaces/restApiReqLog
+
+
+
+

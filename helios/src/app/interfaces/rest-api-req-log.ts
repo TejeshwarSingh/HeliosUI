@@ -1,0 +1,36 @@
+export interface RestApiReqLog {
+    emailGroupId: number ;
+    projectCd: string ;
+    internalUrlVer: string ;
+    systemCd: string ;
+    messageType: string;
+    dateModified: Date ;
+    modifiedBy: string ;
+    dateCreated: Date;
+    createdBy: string;
+    parentLogId: number ;
+    extRefId: string ;
+    itimsRefId: string ;
+    msgReqPayloads: string ;
+    msgReqType: string ;
+    msgRespText: string ;
+    msgReqText: string ;
+    extMsgId: string ;
+    internalMsgId: string ;
+    xUserName: string ;
+    queryString: string ;
+    pathInfo: string ;
+    serverName: string ;
+    remoteAddress: string ;
+    scriptName: string ;
+    serverPort: string ;
+    resultMsg: string ;
+    resultStatus: string ;
+    requestMethod: string ;
+    logInfo: string ;
+    logDate: Date ;
+    logId: number;
+    keyname: string ;
+    internalSessionId: string ;
+    parentLog: RestApiReqLog;
+}

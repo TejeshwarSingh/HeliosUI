@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  iris:
+    build:
+      context: ./iris
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "oracle://username:password@external-db-ip:1521/dbname"
+      # add any other environment variables here
+
+  helios:
+    build:
+      context: ./helios
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"

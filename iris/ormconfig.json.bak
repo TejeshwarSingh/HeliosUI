@@ -1,0 +1,13 @@
+[
+  {
+    "name": "default",
+    "type": "oracle",
+    "host": "Riddler.scgts.com",
+    "port": 1521,
+    "username": "GTSREST",
+    "password": "GTSREST",
+    "database": "",
+    "synchronize": false,
+    "entities": ["entities/*.js"]
+  }
+]

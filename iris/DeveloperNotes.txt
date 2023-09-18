@@ -1,0 +1,102 @@
+nest new Iris
+cd Iris
+npm i
+npm i typeorm
+npm i @nestjs/typeorm
+npm i oracledb
+npm i typeorm-model-generator
+
+nest g module database
+
+nest g module database
+
+npm run start:dev
+///////////////////
+
+C:\jetworks\GitHub\node\iris>nest g --help
+Usage: nest generate|g [options] <schematic> [name] [path]
+
+Generate a Nest element.
+  Schematics available on @nestjs/schematics collection:
+    ┌───────────────┬─────────────┬──────────────────────────────────────────────┐
+    │ name          │ alias       │ description                                  │
+    │ application   │ application │ Generate a new application workspace         │
+    │ class         │ cl          │ Generate a new class                         │
+    │ configuration │ config      │ Generate a CLI configuration file            │
+    │ controller    │ co          │ Generate a controller declaration            │
+    │ decorator     │ d           │ Generate a custom decorator                  │
+    │ filter        │ f           │ Generate a filter declaration                │
+    │ gateway       │ ga          │ Generate a gateway declaration               │
+    │ guard         │ gu          │ Generate a guard declaration                 │
+    │ interceptor   │ itc         │ Generate an interceptor declaration          │
+    │ interface     │ itf         │ Generate an interface                        │
+    │ middleware    │ mi          │ Generate a middleware declaration            │
+    │ module        │ mo          │ Generate a module declaration                │
+    │ pipe          │ pi          │ Generate a pipe declaration                  │
+    │ provider      │ pr          │ Generate a provider declaration              │
+    │ resolver      │ r           │ Generate a GraphQL resolver declaration      │
+    │ service       │ s           │ Generate a service declaration               │
+    │ library       │ lib         │ Generate a new library within a monorepo     │
+    │ sub-app       │ app         │ Generate a new application within a monorepo │
+    │ resource      │ res         │ Generate a new CRUD resource                 │
+    └───────────────┴─────────────┴──────────────────────────────────────────────┘
+
+Options:
+  -d, --dry-run                      Report actions that would be taken without writing out results.
+  -p, --project [project]            Project in which to generate files.
+  --flat                             Enforce flat structure of generated element.
+  --no-flat                          Enforce that directories are generated.
+  --spec                             Enforce spec files generation. (default: true)
+  --skip-import                      Skip importing (default: false)
+  --no-spec                          Disable spec files generation.
+  -c, --collection [collectionName]  Schematics collection to use.
+  -h, --help                         Output usage information.
+
+  -------------------
+
+  ----------------------- notes from test nest rd -------------
+
+  nest g module jlg_temp
+
+nest g controller jlg_temp --no-spec 
+nest g service jlg_temp --no-spec 
+
+---- abstract service 
+nest g service abstract --no-spec
+
+rest_api_proj_systems
+
+nest g module rest_api_proj_systems
+
+nest g controller rest_api_proj_systems --no-spec 
+nest g service rest_api_proj_systems --no-spec 
+
+typeorm-model-generator -h localhost -d tempdb -u sa -x !Passw0rd -e mssql -o .
+
+typeorm-model-generator -h Riddler.scgts.com -d tims2dev.scgts.com -u GTSREST -x GTSREST -e oracle -o ./gtsrest_db
+
+{
+    name: "GTSRESTconnection",
+    type: "oracle",
+    host: "Riddler.scgts.com",
+    port: 1521,
+    username: "GTSREST",
+    password: "GTSREST",
+    serviceName: "tims2dev.scgts.com",
+    //database: "task-management",
+    autoLoadEntities: true,
+    synchronize: false,
+  }
+
+  -------------------------
+
+nest g module rest_api_req_log
+nest g controller rest_api_req_log --no-spec
+nest g service rest_api_req_log --no-spec
+
+  -------------------------
+
+nest g module rest_event_queue_hist
+nest g controller rest_event_queue_hist --no-spec
+nest g service rest_event_queue_hist --no-spec
+  
